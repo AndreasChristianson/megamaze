@@ -1,5 +1,10 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const GitRevisionPlugin = require('git-revision-webpack-plugin')
+const { DefinePlugin } = require('webpack')
+
+const gitRevisionPlugin = new GitRevisionPlugin()
+
 process.traceDeprecation = true
 
 module.exports = {
@@ -30,7 +35,7 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: 'asset/resource',
       },
     ],
@@ -41,6 +46,12 @@ module.exports = {
       favicon: path.join(__dirname, 'src', 'favicon.svg'),
       filename: 'index.html',
       inject: 'body',
+    }),
+    gitRevisionPlugin,
+    new DefinePlugin({
+      VERSION: JSON.stringify(gitRevisionPlugin.version()),
+      COMMITHASH: JSON.stringify(gitRevisionPlugin.commithash()),
+      BRANCH: JSON.stringify(gitRevisionPlugin.branch()),
     }),
   ],
   optimization: {
