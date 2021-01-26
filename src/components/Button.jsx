@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {GridAligned} from './GridAligned'
+import { GridAligned } from './GridAligned'
 
 const ButtonDiv = styled(GridAligned)`
   cursor: pointer;

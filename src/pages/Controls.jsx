@@ -12,10 +12,9 @@ const Header = styled.h1`
 
 const SectionHeader = styled.h3`
   margin: 1em;
-
 `
 
-export const Controls = ({changePage}) => (
+export const Controls = ({ changePage }) => (
   <Background backgroundImage={battle}>
     <Button onClick={() => changePage(Title)} x={2} y={2} width={6} height={6}>
       <Header>Controls</Header>

@@ -18,19 +18,19 @@ const PageContainer = styled.div`
 export const MainPage = () => {
   const [gameState, setGameState] = useState({
     page: Title,
-    score: 0
+    score: 0,
   })
   const changeState = (key, value) => {
     setGameState((old) => ({
       ...old,
-      [key]: value
+      [key]: value,
     }))
   }
 
   return (
     <PageContainer>
       <GlobalStyles />
-      <Navigation gameState={gameState} changeState={changeState}/>
+      <Navigation gameState={gameState} changeState={changeState} />
     </PageContainer>
   )
 }
