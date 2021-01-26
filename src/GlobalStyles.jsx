@@ -5,7 +5,9 @@ export const GlobalStyles = createGlobalStyle`
     border: 0;
     padding: 0;
     margin: 0;
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
   }
+  
   body{
     background-color: lightgray;
     @media (prefers-color-scheme: dark) {

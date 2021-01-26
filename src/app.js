@@ -2,6 +2,6 @@ import 'fontsource-open-sans'
 import ReactDOM from 'react-dom'
 import React from 'react'
 
-import { Homepage } from './pages/Homepage'
+import { MainPage } from './pages/MainPage'
 
-ReactDOM.render(<Homepage />, document.getElementById('root'))
+ReactDOM.render(<MainPage />, document.getElementById('root'))
