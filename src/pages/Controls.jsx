@@ -16,7 +16,7 @@ const SectionHeader = styled.h3`
 
 export const Controls = ({ changePage }) => (
   <Background backgroundImage={battle}>
-    <Button onClick={() => changePage(Title)} x={2} y={2} width={6} height={6}>
+    <Button onClick={() => changePage(Title)} x={2} y={2} width={26} height={26}>
       <Header>Controls</Header>
       <SectionHeader>Movement:</SectionHeader>
       <p>w,a,s,d or arrow keys</p>
