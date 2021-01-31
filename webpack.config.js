@@ -12,6 +12,7 @@ module.exports = {
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   devtool: 'inline-source-map',
   module: {
@@ -70,5 +71,6 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     open: true,
+    historyApiFallback: true
   },
 }

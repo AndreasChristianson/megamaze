@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Navigation } from '../components/Navigation'
 import { GlobalStyles } from '../GlobalStyles'
-import { Title } from './Title'
 
 const PageContainer = styled.div`
   position: absolute;
@@ -17,7 +16,6 @@ const PageContainer = styled.div`
 
 export const MainPage = () => {
   const [gameState, setGameState] = useState({
-    page: Title,
     score: 0,
   })
   const changeState = (key, value) => {

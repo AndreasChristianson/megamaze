@@ -1,18 +1,26 @@
 import React, { useState } from 'react'
+import { Route, HashRouter, Switch } from 'react-router-dom'
 import styled from 'styled-components'
-import { Grid } from './Grid'
+import { Title } from '../pages/Title'
+import { Level1 } from '../pages/Level1'
+import { Controls } from '../pages/Controls'
 
-export const Navigation = (props) => {
-  const {
-    gameState: { page: Page, score },
-    changeState,
-  } = props
-  const changePage = (newPage) => changeState('page', newPage)
+export const Navigation = ({ gameState: { score }, changeState }) => {
   const incrementScore = (amount) => changeState('score', score + amount)
 
   return (
-    <>
-      <Page changePage={changePage} incrementScore={incrementScore} />
-    </>
+    <HashRouter>
+      <Switch>
+        <Route path="/level1">
+          <Level1 incrementScore={incrementScore} />
+        </Route>
+        <Route path="/controls">
+          <Controls />
+        </Route>
+        <Route path="/">
+          <Title />
+        </Route>
+      </Switch>
+    </HashRouter>
   )
 }
