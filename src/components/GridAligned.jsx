@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import { rows, columns } from '../constants/grid'
+import { rows, columns, pixelHeight, pixelWidth } from '../constants/grid'
 
-export const GridAligned = styled.div`
-  width: ${({ width = 1 }) => (width * 100) / columns}%;
-  height: ${({ height = 1 }) => (height * 100) / rows}%;
-  top: ${({ x }) => (x * 100) / rows}%;
-  left: ${({ y }) => (y * 100) / columns}%;
-  position: absolute;
-  box-sizing: border-box;
-`
+
+export const GridAligned = ({
+  innerElement,
+  width = 1,
+  height = 1,
+  x,
+  y,
+  children,
+  ...props
+}) => {
+  const xPx = (x * pixelHeight) / rows
+  const yPx = (y * pixelWidth) / columns
+  const translate = `translate(${xPx} ${yPx})`
+  const widthPx = `${(width * pixelWidth) / columns}px`
+  const heightPx = `${(height * pixelHeight) / rows}px`
+  const Inner = innerElement
+  return (
+    <g transform={translate}>
+      <Inner width={widthPx} height={heightPx} {...props}>
+        {children}
+      </Inner>
+    </g>
+  )
+}

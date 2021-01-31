@@ -10,21 +10,19 @@ export const Title = ({ changePage }) => (
   <Background backgroundImage={title}>
     <Button
       onClick={() => changePage(Controls)}
-      x={25}
-      y={10}
+      x={10}
+      y={25}
       width={4}
       height={2}
-    >
-      {'Controls'}
-    </Button>
+      text={'Controls'}
+    />
     <Button
       onClick={() => changePage(Level1)}
-      x={25}
-      y={18}
+      x={18}
+      y={25}
       width={4}
       height={2}
-    >
-      {'Play Game!'}
-    </Button>
+      text={'Play Game!'}
+    />
   </Background>
 )

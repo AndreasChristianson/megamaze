@@ -1,22 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import { GridAligned } from './GridAligned'
+import { Text, SvgText } from './Text'
 
-const ButtonDiv = styled(GridAligned)`
+const StyledText = styled(Text)`
   cursor: pointer;
-  border-radius: 1em;
-  border: 2px solid black;
-  :focus {
-    border-color: red;
-  }
-  background-color: #33333355;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `
 
-export const Button = (props) => (
-  <ButtonDiv role="button" {...props}>
-    <div>{props.children}</div>
-  </ButtonDiv>
+export const Button = ({ text, children, width, height, x, y, onClick, ...props}) => (
+  <StyledText
+    width={width}
+    height={height}
+    y={y}
+    x={x}
+    shadingColor="#333333"
+    shadingOpacity="0.3"
+    borderColor="black"
+    onClick={onClick}
+    {...props}
+  >
+    {text ? <SvgText>{text}</SvgText> : <>{ children }</>}
+  </StyledText>
 )

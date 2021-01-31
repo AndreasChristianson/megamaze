@@ -27,6 +27,7 @@
     "fontsource-open-sans": "^3.0.9",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-hotkeys-hook": "^3.0.3",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

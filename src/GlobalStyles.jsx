@@ -9,9 +9,9 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   body{
-    background-color: lightgray;
+    background-color: #aaa;
     @media (prefers-color-scheme: dark) {
-      background-color: gray;
+      background-color: #888;
     }
   }
 `
