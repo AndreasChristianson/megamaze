@@ -16,26 +16,26 @@ const Header = styled(Paragraph)`
 `
 
 export const Controls = ({ changePage }) => {
-  const history = useHistory();
+  const history = useHistory()
 
   return (
-  <Background backgroundImage={battle}>
-    <Button
-      onClick={() => history.push("/")}
-      x={2}
-      y={2}
-      width={26}
-      height={26}
-      shadingOpacity="0.9"
-      shadingColor="white"
-    >
-      <Header transform="translate(0 -200)">{'Movement'}</Header>
-      <Paragraph transform="translate(0 -100)">
-        {'WASD, QWES, HJKL and the arrow keys'}
-      </Paragraph>
-      <Header transform="translate(0 100)">{'Shoot'}</Header>
-      <Paragraph transform="translate(0 200)">{'left click'}</Paragraph>
-    </Button>
-  </Background>
-)
-  }
+    <Background backgroundImage={battle}>
+      <Button
+        onClick={() => history.push('/')}
+        x={2}
+        y={2}
+        width={26}
+        height={26}
+        shadingOpacity="0.9"
+        shadingColor="white"
+      >
+        <Header transform="translate(0 -200)">{'Movement'}</Header>
+        <Paragraph transform="translate(0 -100)">
+          {'WASD, QWES, HJKL and the arrow keys'}
+        </Paragraph>
+        <Header transform="translate(0 100)">{'Shoot'}</Header>
+        <Paragraph transform="translate(0 200)">{'left click'}</Paragraph>
+      </Button>
+    </Background>
+  )
+}

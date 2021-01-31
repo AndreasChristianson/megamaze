@@ -30,10 +30,7 @@ export const Level1 = () => {
 
   return (
     <Background backgroundImage={level}>
-      <Vim
-        x={25}
-        y={25}
-      />
+      <Vim x={25} y={25} />
     </Background>
   )
 }

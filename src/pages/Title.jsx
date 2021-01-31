@@ -6,12 +6,12 @@ import { Button } from '../components/Button'
 import { useHistory } from 'react-router-dom'
 
 export const Title = () => {
-  const history = useHistory();
+  const history = useHistory()
 
   return (
     <Background backgroundImage={title}>
       <Button
-        onClick={() => history.push("/controls")}
+        onClick={() => history.push('/controls')}
         x={10}
         y={25}
         width={4}
@@ -19,7 +19,7 @@ export const Title = () => {
         text={'Controls'}
       />
       <Button
-        onClick={() => history.push("/level1")}
+        onClick={() => history.push('/level1')}
         x={18}
         y={25}
         width={4}

@@ -2,16 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { columns, pixelHeight, pixelWidth, rows } from '../constants/grid'
 
-const Line = styled.line.attrs(({
+const Line = styled.line.attrs(({ x1, x2, y1, y2 }) => ({
   x1,
   x2,
   y1,
-  y2
-}) => ({
-  x1,
-  x2,
-  y1,
-  y2
+  y2,
 }))`
   stroke: #999;
 `
