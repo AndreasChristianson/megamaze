@@ -5,28 +5,28 @@ import { Background } from '../components/Background'
 import { Vim } from '../components/Vim'
 
 export const Level1 = () => {
-  // const [levelState, setLevelState] = useState({
-  //   walls:[
+  const [levelState, setLevelState] = useState({
+    walls:[
 
-  //   ],
-  //   vim: {
-  //     x:25,
-  //     y:25
-  //   },
-  //   mims:[{
-  //     x:25,
-  //     y:25
-  //   },{
-  //     x:25,
-  //     y:25
-  //   },{
-  //     x:25,
-  //     y:25
-  //   },],
-  //   projectiles:[
+    ],
+    vim: {
+      x:25,
+      y:25
+    },
+    mims:[{
+      x:25,
+      y:25
+    },{
+      x:25,
+      y:25
+    },{
+      x:25,
+      y:25
+    },],
+    projectiles:[
 
-  //   ]
-  // })
+    ]
+  })
 
   return (
     <Background backgroundImage={level}>
