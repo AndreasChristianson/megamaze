@@ -6,7 +6,16 @@ const StyledText = styled(Text)`
   cursor: pointer;
 `
 
-export const Button = ({ text, children, width, height, x, y, onClick, ...props}) => (
+export const Button = ({
+  text,
+  children,
+  width,
+  height,
+  x,
+  y,
+  onClick,
+  ...props
+}) => (
   <StyledText
     width={width}
     height={height}
@@ -18,6 +27,6 @@ export const Button = ({ text, children, width, height, x, y, onClick, ...props}
     onClick={onClick}
     {...props}
   >
-    {text ? <SvgText>{text}</SvgText> : <>{ children }</>}
+    {text ? <SvgText>{text}</SvgText> : <>{children}</>}
   </StyledText>
 )

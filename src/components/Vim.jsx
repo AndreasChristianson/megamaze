@@ -10,7 +10,7 @@ const VimDisplay = styled(GridAligned)`
   background-size: 100% 100%;
 `
 
-export const Vim = ({x: initialX, y: initialY}) => {
+export const Vim = ({ x: initialX, y: initialY }) => {
   const [vimPosition, setVimPosition] = useState({
     x: initialX,
     y: initialY,
@@ -27,12 +27,14 @@ export const Vim = ({x: initialX, y: initialY}) => {
         y: newY,
       }
     })
-    useHotkeys('Up, w, k', () => boundedIncrement(0, -1));
-    useHotkeys('Down, s, j', () => boundedIncrement(0, 1));
-    useHotkeys('Left, q, a, h', () => boundedIncrement(-1, 0));
-    useHotkeys('Right, d, e, l', () => boundedIncrement(1, 0));
+  useHotkeys('Up, w, k', () => boundedIncrement(0, -1))
+  useHotkeys('Down, s, j', () => boundedIncrement(0, 1))
+  useHotkeys('Left, q, a, h', () => boundedIncrement(-1, 0))
+  useHotkeys('Right, d, e, l', () => boundedIncrement(1, 0))
 
-  return <GridAligned {...vimPosition} innerElement="svg">
-    <image href={vimImage} height="100%" width="100%" />
-  </GridAligned>
+  return (
+    <GridAligned {...vimPosition} innerElement="svg">
+      <image href={vimImage} height="100%" width="100%" />
+    </GridAligned>
+  )
 }

@@ -7,11 +7,8 @@ import { columns, rows } from '../constants/grid'
 import { useHotkeys } from 'react-hotkeys-hook'
 
 export const Level1 = ({ changePage }) => {
-
   return (
-    <Background
-      backgroundImage={level}
-    >
+    <Background backgroundImage={level}>
       <Vim x={25} y={25} />
     </Background>
   )

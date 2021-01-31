@@ -4,7 +4,7 @@ import battle from '../images/title.webp'
 import { Background } from '../components/Background'
 import { Button } from '../components/Button'
 import { Title } from './Title'
-import {SvgText} from '../components/Text'
+import { SvgText } from '../components/Text'
 
 const Paragraph = styled(SvgText)`
   font-size: 2em;
@@ -26,18 +26,12 @@ export const Controls = ({ changePage }) => (
       shadingOpacity="0.9"
       // shadingColor="white"
     >
-      <Header transform="translate(0 -200)">
-        {'Movement'}
-      </Header>
+      <Header transform="translate(0 -200)">{'Movement'}</Header>
       <Paragraph transform="translate(0 -100)">
         {'WASD, QWES, HJKL and the arrow keys'}
       </Paragraph>
-      <Header transform="translate(0 100)">
-        {'Shoot'}
-      </Header>
-      <Paragraph transform="translate(0 200)">
-        {'left click'}
-      </Paragraph>
+      <Header transform="translate(0 100)">{'Shoot'}</Header>
+      <Paragraph transform="translate(0 200)">{'left click'}</Paragraph>
     </Button>
   </Background>
 )

@@ -46,7 +46,14 @@ export const Text = ({
 }) => {
   return (
     <>
-      <GridAligned y={y} x={x} width={width} height={height} innerElement="svg" onClick={onClick}>
+      <GridAligned
+        y={y}
+        x={x}
+        width={width}
+        height={height}
+        innerElement="svg"
+        onClick={onClick}
+      >
         {shadingColor ? (
           <Shading
             shadingColor={shadingColor}

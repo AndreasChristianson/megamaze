@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { rows, columns, pixelHeight, pixelWidth } from '../constants/grid'
 
-
 export const GridAligned = ({
   innerElement,
   width = 1,
