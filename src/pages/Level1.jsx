@@ -192,7 +192,9 @@ export const Level1 = ({ score, incrementScore }) => {
       {levelState.walls.map((wall, index) => (
         <Wall key={index} area={wall} />
       ))}
-      {victoryAchieved ? <VictoryButton nextLevel={levelState.nextLevel}/> : null}
+      {victoryAchieved ? (
+        <VictoryButton nextLevel={levelState.nextLevel} />
+      ) : null}
     </Background>
   )
 }

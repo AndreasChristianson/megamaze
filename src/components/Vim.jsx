@@ -5,9 +5,9 @@ import vimImage from '../images/vim-tiny.webp'
 import { useHotkeys } from 'react-hotkeys-hook'
 
 const HighlightCircle = styled.circle.attrs({
-  cx:"50%",
-  cy:"50%" ,
-  r:"50%"
+  cx: '50%',
+  cy: '50%',
+  r: '50%',
 })`
   stroke: black;
   fill: white;
