@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { GridAligned } from './GridAligned'
-import vimImage from '../images/vim-tiny.webp'
 import { useHotkeys } from 'react-hotkeys-hook'
 import { makeRange } from '../array-generation'
 

@@ -1,0 +1,130 @@
+export const initialState = {
+  nextLevel: '/level2',
+  walls: [
+    {
+      yMin: 11,
+      yMax: 27,
+      xMin: 21,
+      xMax: 21,
+    },
+    {
+      yMin: 10,
+      yMax: 16,
+      xMin: 20,
+      xMax: 20,
+    },
+    {
+      yMin: 24,
+      yMax: 27,
+      xMin: 20,
+      xMax: 20,
+    },
+    {
+      yMin: 28,
+      yMax: 29,
+      xMin: 0,
+      xMax: 29,
+    },
+    {
+      yMin: 0,
+      yMax: 2,
+      xMin: 0,
+      xMax: 29,
+    },
+    {
+      yMin: 15,
+      yMax: 27,
+      xMin: 0,
+      xMax: 0,
+    },
+    {
+      yMin: 14,
+      yMax: 27,
+      xMin: 29,
+      xMax: 29,
+    },
+    {
+      yMin: 16,
+      yMax: 20,
+      xMin: 24,
+      xMax: 28,
+    },
+    {
+      yMin: 13,
+      yMax: 24,
+      xMin: 15,
+      xMax: 16,
+    },
+    {
+      yMin: 11,
+      yMax: 12,
+      xMin: 2,
+      xMax: 19,
+    },
+    {
+      yMin: 10,
+      yMax: 10,
+      xMin: 12,
+      xMax: 19,
+    },
+    {
+      yMin: 9,
+      yMax: 10,
+      xMin: 2,
+      xMax: 7,
+    },
+    {
+      yMin: 6,
+      yMax: 8,
+      xMin: 6,
+      xMax: 7,
+    },
+    {
+      yMin: 5,
+      yMax: 6,
+      xMin: 8,
+      xMax: 26,
+    },
+    {
+      yMin: 7,
+      yMax: 11,
+      xMin: 25,
+      xMax: 26,
+    },
+    {
+      yMin: 11,
+      yMax: 11,
+      xMin: 23,
+      xMax: 24,
+    },
+    {
+      yMin: 12,
+      yMax: 12,
+      xMin: 24,
+      xMax: 25,
+    },
+    {
+      yMin: 27,
+      yMax: 27,
+      xMin: 1,
+      xMax: 4,
+    },
+  ],
+  victory: {
+    yMin: 13,
+    yMax: 18,
+    xMin: 17,
+    xMax: 19,
+  },
+  vim: {
+    x: 25,
+    y: 25,
+  },
+  mims: [
+    {
+      x: 10,
+      y: 10,
+    },
+  ],
+  projectiles: [],
+}

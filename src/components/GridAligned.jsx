@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { rows, columns, pixelHeight, pixelWidth } from '../constants/grid'
+import { gridPositionToPixels } from '../utils/svg-math'
 
 export const GridAligned = ({
   innerElement,
@@ -11,15 +12,16 @@ export const GridAligned = ({
   children,
   ...props
 }) => {
-  const xPx = (x * pixelHeight) / rows
-  const yPx = (y * pixelWidth) / columns
+  const { x: xPx, y: yPx } = gridPositionToPixels({ x, y })
+  const { x: heightPx, y: widthPx } = gridPositionToPixels({
+    x: height,
+    y: width,
+  })
   const translate = `translate(${xPx} ${yPx})`
-  const widthPx = `${(width * pixelWidth) / columns}px`
-  const heightPx = `${(height * pixelHeight) / rows}px`
   const Inner = innerElement
   return (
     <g transform={translate}>
-      <Inner width={widthPx} height={heightPx} {...props}>
+      <Inner width={`${widthPx}px`} height={`${heightPx}px`} {...props}>
         {children}
       </Inner>
     </g>
