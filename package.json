@@ -25,6 +25,7 @@
   "homepage": "https://github.com/AndreasChristianson/static-site-template#readme",
   "dependencies": {
     "fontsource-open-sans": "^3.0.9",
+    "nanoid": "^3.1.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hotkeys-hook": "^3.0.3",
